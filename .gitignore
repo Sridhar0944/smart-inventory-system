@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env
+
+# Build folders
+dist/
+build/
+client/dist/
+
+# Uploads
+server/uploads/products/*
+server/uploads/qrcodes/*
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
