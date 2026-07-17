@@ -178,11 +178,6 @@ const login = (req, res) => {
   });
 };
 
-
-
-
-
-
 module.exports = {
     register,
     login
