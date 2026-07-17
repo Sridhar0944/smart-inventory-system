@@ -24,7 +24,7 @@ export const AddSupplier = () => {
         e.preventDefault()
 
         try{
-            await axios.post( "import.meta.env.VITE_API_URL/api/suppliers",formData)
+            await axios.post( "http://localhost:5000/api/suppliers",formData)
             alert("Supplier Added Successfully")
             navigate("/suppliers")
         }catch(err){

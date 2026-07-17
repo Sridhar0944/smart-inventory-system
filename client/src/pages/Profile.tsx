@@ -26,7 +26,7 @@ const Profile = () => {
   const fetchProfile = async () => {
     try {
       const res = await axios.get(
-        "import.meta.env.VITE_API_URL/api/users/profile"
+        "http://localhost:5000/api/users/profile"
       );
 
       setUser(res.data);
