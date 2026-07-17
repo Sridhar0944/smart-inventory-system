@@ -4,6 +4,7 @@ const findUserByEmail = (email, callback) => {
   const sql = "SELECT * FROM users WHERE email = ?";
 
   db.query(sql, [email], (err, result) => {
+    console.log("EMAIL:", email);
     console.log("QUERY ERROR:", err);
     console.log("QUERY RESULT:", result);
 
