@@ -21,7 +21,7 @@ const Categories = () => {
 
   const fetchCategories = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/categories");
+    const res = await axios.get("import.meta.env.VITE_API_URL/api/categories");
 
     console.log("Response =", res.data);
     console.log("Categories =", res.data.data);
@@ -44,14 +44,14 @@ const Categories = () => {
     try {
       if(editingId === null)
         {
-            await axios.post("http://localhost:5000/api/categories", {
+            await axios.post("import.meta.env.VITE_API_URL/api/categories", {
             category_name: categoryName,
             description,
             });
             alert("Category added successfully");
         }
     else{
-        await axios.put(`http://localhost:5000/api/categories/${editingId}`,{
+        await axios.put(`import.meta.env.VITE_API_URL/api/categories/${editingId}`,{
             category_name: categoryName,
             description
         })
@@ -81,7 +81,7 @@ const Categories = () => {
     if(!confirmData) return
 
     try{
-        await axios.delete(`http://localhost:5000/api/categories/${id}`)
+        await axios.delete(`import.meta.env.VITE_API_URL/api/categories/${id}`)
         alert("Category delete succussfully")
         fetchCategories()
     }catch(err){

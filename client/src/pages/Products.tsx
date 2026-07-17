@@ -239,7 +239,7 @@ const filteredProducts = products.filter((product) => {
                     <td className="px-6 py-4">
                       {product.image ? (
                         <img
-                          src={`http://localhost:5000/uploads/products/${product.image}`}
+                          src={`import.meta.env.VITE_API_URL/uploads/products/${product.image}`}
                           alt={product.product_name}
                           className="h-14 w-14 rounded-lg border object-cover"
                         />
@@ -293,7 +293,7 @@ const filteredProducts = products.filter((product) => {
                     <td className="px-6 py-4">
                       {product.qr_code && (
                         <img
-                          src={`http://localhost:5000/uploads/qrcodes/${product.qr_code}`}
+                          src={`import.meta.env.VITE_API_URL/uploads/qrcodes/${product.qr_code}`}
                           alt="QR Code"
                           className="h-16 w-16"
                         />
@@ -401,7 +401,7 @@ const filteredProducts = products.filter((product) => {
 
                   {product.image ? (
                     <img
-                      src={`http://localhost:5000/uploads/products/${product.image}`}
+                      src={`import.meta.env.VITE_API_URL/uploads/products/${product.image}`}
                       alt={product.product_name}
                       className="h-20 w-20 rounded-xl border object-cover"
                     />
@@ -495,7 +495,7 @@ const filteredProducts = products.filter((product) => {
                         </p>
                         {product.qr_code && (
                           <img
-                            src={`http://localhost:5000/uploads/qrcodes/${product.qr_code}`}
+                            src={`import.meta.env.VITE_API_URL/uploads/qrcodes/${product.qr_code}`}
                             alt="QR-Code"
                             className="h-24 w-24 rounded border"
                           />

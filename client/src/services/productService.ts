@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/products";
+const API_URL = "import.meta.env.VITE_API_URL/api/products";
 
 
 const getAuthHeader = () => {
@@ -18,7 +18,7 @@ const getAuthHeader = () => {
 export const getProductById = async (id:number) => {
     const token = localStorage.getItem("token")
 
-    const response = await axios.get(`http://localhost:5000/api/products/${id}`,{
+    const response = await axios.get(`import.meta.env.VITE_API_URL/api/products/${id}`,{
         headers:{
             Authorization:`Bearer ${token}`
         }
@@ -35,7 +35,7 @@ export const getProducts = async () => {
     console.log("Token From Storage: ",token)
 
     const response = await axios.get(
-        "http://localhost:5000/api/products",
+        "import.meta.env.VITE_API_URL/api/products",
         {
             headers: getAuthHeader()
         }
