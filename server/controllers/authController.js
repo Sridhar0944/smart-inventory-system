@@ -181,45 +181,6 @@ const login = (req, res) => {
 
 
 
-        // Generate JWT Token
-
-        const token = jwt.sign(
-
-            {
-                id:user.id,
-                email:user.email,
-                role:user.role
-            },
-
-            process.env.JWT_SECRET,
-
-            {
-                expiresIn:"1d"
-            }
-
-        );
-
-
-
-
-        res.status(200).json({
-
-            success:true,
-
-            message:"Login Successfully",
-
-            token,
-
-            user:{
-                id:user.id,
-                name:user.name,
-                email:user.email,
-                role:user.role
-            }
-
-        });
-
-
 
 
 module.exports = {
