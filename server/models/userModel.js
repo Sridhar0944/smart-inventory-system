@@ -2,7 +2,13 @@ const db = require("../config/db");
 
 const findUserByEmail = (email, callback) => {
   const sql = "SELECT * FROM users WHERE email = ?";
-  db.query(sql, [email], callback);
+
+  db.query(sql, [email], (err, result) => {
+    console.log("QUERY ERROR:", err);
+    console.log("QUERY RESULT:", result);
+
+    callback(err, result);
+  });
 };
 
 const createUser = (user, callback) => {
